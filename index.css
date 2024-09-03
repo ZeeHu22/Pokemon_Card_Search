@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 calc(25% - 10px);
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.loading-spinner i {
+    font-size: 2em;
+    color: black;
+}
+
+/* Skeleton Loader */
+.skeleton-card {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 200px;
+}
+
+.skeleton-img {
+    background-color: #e0e0e0;
+    height: 120px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.skeleton-text {
+    background-color: #e0e0e0;
+    height: 20px;
+    width: 80px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
