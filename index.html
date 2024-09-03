@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokémon TCG</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
-    <script src="https://kit.fontawesome.com/69b72dcb0c.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/69b72dcb0c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <h1>Pokémon Card Search</h1>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search for Pokémon cards...">
+      <h1>Pokémon Card Search</h1>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search for Pokémon cards..."
+        />
+      </div>
+      <div class="filters">
+        <label for="typeSelect">Type:</label>
+        <select id="typeSelect">
+          <option value="">All</option>
+          <!-- Options will be populated dynamically -->
+        </select>
+        <label for="subtypeSelect">Subtype:</label>
+        <select id="subtypeSelect">
+          <option value="">All</option>
+          <!-- Options will be populated dynamically -->
+        </select>
+        <label for="raritySelect">Rarity:</label>
+        <select id="raritySelect">
+          <option value="">All</option>
+          <!-- Options will be populated dynamically -->
+        </select>
+      </div>
+      <div class="results">
+        <div class="spinner-container hide-spinner">
+          <i class="fas fa-spinner fa-spin spinner"></i>
         </div>
-        <div class="filters">
-            <label for="typeSelect">Type:</label>
-            <select id="typeSelect">
-                <option value="">All</option>
-                <!-- Options will be populated dynamically -->
-            </select>
-            <label for="subtypeSelect">Subtype:</label>
-            <select id="subtypeSelect">
-                <option value="">All</option>
-                <!-- Options will be populated dynamically -->
-            </select>
-            <label for="raritySelect">Rarity:</label>
-            <select id="raritySelect">
-                <option value="">All</option>
-                <!-- Options will be populated dynamically -->
-            </select>
+        <div class="skeleton-container">
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-text"></div>
+          </div>
         </div>
-        <div class="results">
-            <!-- Loading spinner or skeleton will go here -->
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

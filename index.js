@@ -6,18 +6,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtypeSelect = document.getElementById('subtypeSelect');
     const raritySelect = document.getElementById('raritySelect');
     const resultsContainer = document.querySelector('.results');
+
+    const spinnerContainer = document.querySelector('.spinner-container');
+    const skeletonContainer = document.querySelector('.skeleton-container');
+
     const apiKey = 'b875828f-7d9c-4333-a163-5b82b54a86e5';
 
     let allCards = [];
 
     // Fetch all cards from Pokémon TCG API
     async function fetchAllCards() {
+        // Show spinner and skeleton
+        spinnerContainer.classList.remove('hide-spinner');
+        skeletonContainer.style.display = 'flex';
+        
         const response = await fetch(`https://api.pokemontcg.io/v2/cards`, {
             headers: {
                 'X-Api-Key': apiKey
             }
         });
         const data = await response.json();
+
+        // Hide spinner and skeleton
+        spinnerContainer.classList.add('hide-spinner');
+        skeletonContainer.style.display = 'none';
+
         return data.data;
     }
 
@@ -89,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Populate subtypes and rarities based on filtered cards
     function populateSubtypesAndRarities(cards) {
-        const currentSubtype = subtypeSelect.value; // Save current selection
-        const currentRarity = raritySelect.value; // Save current selection
+        const currentSubtype = subtypeSelect.value;
+        const currentRarity = raritySelect.value;
 
         const subtypes = [...new Set(cards.flatMap(card => card.subtypes || []))];
         const rarities = [...new Set(cards.map(card => card.rarity).filter(Boolean))]; // Exclude empty rarities
@@ -130,14 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
     subtypeSelect.addEventListener('change', () => {
         displayResults();
         if (subtypeSelect.value === '') {
-            displayResults(); // Display results without resetting filters
+            displayResults();
         }
     });
 
     raritySelect.addEventListener('change', () => {
         displayResults();
         if (raritySelect.value === '') {
-            displayResults(); // Display results without resetting filters
+            displayResults();
         }
     });
 
