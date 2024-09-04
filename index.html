@@ -13,7 +13,10 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pokémon Card Search</h1>
+      <nav>
+        <img src="./assets/Pokemon_TCG_Live_Logo-1024x1024.png" alt="">
+        <h1>Pokémon TCG Search</h1>
+      </nav>
       <div class="search-bar">
         <input
           type="text"
@@ -22,21 +25,27 @@
         />
       </div>
       <div class="filters">
-        <label for="typeSelect">Type:</label>
-        <select id="typeSelect">
-          <option value="">All</option>
-          <!-- Options will be populated dynamically -->
-        </select>
-        <label for="subtypeSelect">Subtype:</label>
-        <select id="subtypeSelect">
-          <option value="">All</option>
-          <!-- Options will be populated dynamically -->
-        </select>
-        <label for="raritySelect">Rarity:</label>
-        <select id="raritySelect">
-          <option value="">All</option>
-          <!-- Options will be populated dynamically -->
-        </select>
+        <div class="filter">
+          <label for="typeSelect">Type:</label>
+          <select id="typeSelect">
+            <option value="">All</option>
+            <!-- Options will be populated dynamically -->
+          </select>
+        </div>
+        <div class="filter">
+          <label for="subtypeSelect">Subtype:</label>
+          <select id="subtypeSelect">
+            <option value="">All</option>
+            <!-- Options will be populated dynamically -->
+          </select>
+        </div>
+        <div class="filter">
+          <label for="raritySelect">Rarity:</label>
+          <select id="raritySelect">
+            <option value="">All</option>
+            <!-- Options will be populated dynamically -->
+          </select>
+        </div>
       </div>
       <div class="results">
         <div class="spinner-container hide-spinner">
