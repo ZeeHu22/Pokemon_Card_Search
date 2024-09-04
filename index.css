@@ -4,16 +4,16 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #303030;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #6b6b6b;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -52,8 +52,8 @@ nav h1 {
   font-size: 64px;
   margin-right: 10px;
   text-align: center;
-  color: #ffffff;
-  text-shadow: -2px -2px #000, 2px -2px #000, -2px 2px #000, 2px 2px #000;
+  color: #000;
+  text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
   z-index: 2;
 }
 
@@ -64,9 +64,10 @@ nav h1 {
 #searchInput {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 4px;
   font-size: 16px;
+  background-color: #333;
 }
 
 .filters {
@@ -81,12 +82,15 @@ nav h1 {
 
 .filters label {
   margin-right: 10px;
+  color: #fff;
 }
 
 .filters select {
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 4px;
+  background-color: #333;
+  color: #fff;
 }
 
 .results {
@@ -101,11 +105,17 @@ nav h1 {
   max-width: calc(25% - 10px);
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 4px;
   text-align: center;
-  background-color: #fff;
+  background-color: #333;
+  transition: transform 0.3s ease, z-index 0.3s ease;
 }
+
+.card:hover {
+    transform: scale(1.2);
+    z-index: 10;
+  }
 
 .card img {
   max-width: 100%;
@@ -117,7 +127,8 @@ nav h1 {
 .card p {
   margin: 0;
   font-size: 14px;
-  color: #333;
+  font-weight: bold;
+  color: #fff;
 }
 
 /* Spinner */
@@ -136,7 +147,7 @@ nav h1 {
 
 .spinner {
   font-size: 96px;
-  color: black;
+  color: #fff;
 }
 
 @keyframes spin {
@@ -161,15 +172,15 @@ nav h1 {
   flex: 1 1 calc(25% - 10px);
   box-sizing: border-box;
   padding: 10px;
-  border: 2px solid #f4f4f4;
+  border: 2px solid #000;
   border-radius: 4px;
   text-align: center;
-  background-color: #fff;
+  background-color: #333;
   aspect-ratio: 3 / 4;
 }
 
 .skeleton-img {
-  background-color: #e0e0e0;
+  background-color: #000;
   height: 85%;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -177,7 +188,7 @@ nav h1 {
 }
 
 .skeleton-text {
-  background-color: #e0e0e0;
+  background-color: #000;
   height: 10%;
   width: 80%;
   margin: 0 auto;
